@@ -36,8 +36,8 @@ public class LoginSteps {
 
 	}
 
-	@When("User enters username and password")
-	public void user_enters_username_and_password()
+	@When("^User enters \"(.*)\" and \"(.*)\"$")
+	public void user_enters_username_and_password(String usrname, String paswd)
 
 	{
 		System.out.println("step 1: User enters username and password");
@@ -45,9 +45,9 @@ public class LoginSteps {
 		WebElement usernameField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username")));
 		//WebElement usernameField = driver.findElement(By.name("username"));
 		System.out.println("Username field located");
-		usernameField.sendKeys("Admin");
+		usernameField.sendKeys(usrname);
 		WebElement passwordField = driver.findElement(By.name("password"));
-		passwordField.sendKeys("admin123");
+		passwordField.sendKeys(paswd);
 
 	}
 

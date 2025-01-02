@@ -20,7 +20,7 @@
 Feature: Test the login functionality of OrangeHRM
 Scenario: Test the valid login
 Given User is on loginPage
-When User enters username and password
+When User enters "Admin" and "admin123"
 And Click on Login Button
 Then User should land on homePage
 
