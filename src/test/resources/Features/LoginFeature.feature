@@ -15,14 +15,21 @@
 #<> (placeholder)
 #""
 ## (Comments)
-
-
+#Feature: Test the login functionality of OrangeHRM
+#Scenario: Test the valid login
+#Given User is on loginPage
+#When User enters "Admin" and "admin123"
+#And Click on Login Button
+#Then User should land on homePage
 Feature: Test the login functionality of OrangeHRM
-Scenario: Test the valid login
-Given User is on loginPage
-When User enters "Admin" and "admin123"
-And Click on Login Button
-Then User should land on homePage
 
+  Scenario Outline: Test the valid login
+    Given User is on loginPage
+    When User enters <username> and <password>
+    And Click on Login Button
+    Then User should land on homePage
 
-
+    Examples: 
+      | username | password |
+      | Admin    | admin123 |
+      | Admin1   | admin123 |
