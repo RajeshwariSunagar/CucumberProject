@@ -1,6 +1,7 @@
 package com.stepDefination;
 
 import java.io.File;
+import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
@@ -13,6 +14,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -56,6 +58,19 @@ public class LoginSteps {
 	@Then("User should land on homePage")
 	public void user_should_land_on_home_page() {
 		System.out.println("step 3: User is on homepage");
+
+	}
+
+	// DataTable
+	@When("User enters credentials using DataTable")
+	public void user_enters_credentials_using_data_table(DataTable dataTable) {
+		System.out.println("step 1: User enters username and password");
+		List<List<String>> data = dataTable.cells();
+		WebElement usernameField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username")));
+		System.out.println("Username field located");
+		usernameField.sendKeys(data.get(0).get(0));
+		WebElement passwordField = driver.findElement(By.name("password"));
+		passwordField.sendKeys(data.get(0).get(1));
 
 	}
 
