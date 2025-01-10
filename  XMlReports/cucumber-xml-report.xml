@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="39.319" tests="3" skipped="0" failures="0" errors="0">
-<testcase classname="Test the login functionality of OrangeHRM using DataTable" name="Test the valid login using DataTable" time="15.69">
+<testsuite name="Cucumber" time="0.249" tests="8" skipped="0" failures="0" errors="0">
+<testcase classname="Test the login functionality of OrangeHRM using DataTable" name="Test the valid login using DataTable" time="0.032">
 <system-out><![CDATA[
 Given User is on loginPage..................................................passed
 When User enters credentials using DataTable................................passed
@@ -8,7 +8,7 @@ And Click on Login Button...................................................pass
 Then User should land on homePage...........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Test the login functionality of OrangeHRM" name="Test the valid login - #1.1" time="10.966">
+<testcase classname="Test the login functionality of OrangeHRM" name="Test the valid login - #1.1" time="0.013">
 <system-out><![CDATA[
 Given User is on loginPage..................................................passed
 When User enters Admin and admin123.........................................passed
@@ -16,12 +16,22 @@ And Click on Login Button...................................................pass
 Then User should land on homePage...........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Test the login functionality of OrangeHRM" name="Test the valid login - #1.2" time="12.42">
+<testcase classname="Test the login functionality of OrangeHRM" name="Test the valid login - #1.2" time="0.004">
 <system-out><![CDATA[
 Given User is on loginPage..................................................passed
 When User enters Admin1 and admin123........................................passed
 And Click on Login Button...................................................passed
 Then User should land on homePage...........................................passed
 ]]></system-out>
+</testcase>
+<testcase classname="Using of tags in Cucumber" name="Scenario1" time="0.003">
+</testcase>
+<testcase classname="Using of tags in Cucumber" name="Scenario2" time="0.001">
+</testcase>
+<testcase classname="Using of tags in Cucumber" name="Scenario3" time="0">
+</testcase>
+<testcase classname="Using of tags in Cucumber" name="Scenario4" time="0.001">
+</testcase>
+<testcase classname="Using of tags in Cucumber" name="Scenario5" time="0.001">
 </testcase>
 </testsuite>
